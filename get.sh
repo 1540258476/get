@@ -72,7 +72,7 @@ readonly CASA_LOGS_PATH=/var/log/casaos/
 readonly CASA_PACKAGE_EXT=".tar.gz"
 readonly CASA_RELEASE_API="https://api.github.com/repos/${CASA_REPO}/releases"
 readonly CASA_OPENWRT_DOCS="https://github.com/IceWhaleTech/CasaOS-OpenWrt"
-readonly CASA_UNINSTALL_URL="https://raw.githubusercontent.com/IceWhaleTech/get/main/casaos-uninstall"
+readonly CASA_UNINSTALL_URL="https://raw.staticdn.net/IceWhaleTech/get/main/casaos-uninstall.sh"
 readonly CASA_VERSION_URL="https://api.casaos.io/casaos-api/version"
 readonly CASA_UNINSTALL_PATH=/usr/bin/casaos-uninstall
 
@@ -475,7 +475,7 @@ Download_CasaOS() {
     else
         Casa_Tag="$version"
     fi
-    Casa_Package_URL="https://github.com/${CASA_REPO}/releases/download/${Casa_Tag}/${Casa_Package}"
+    Casa_Package_URL="https://gitee.com/vvvtc/CasaOS/releases/download/${Casa_Tag}/${Casa_Package}"
     # Remove Temp File
     ${sudo_cmd} rm -rf "$PREFIX/tmp/${Casa_Package}"
     # Download Package
